@@ -24,13 +24,8 @@ function App() {
   }, [codeHtml, codeCss, codeJs]);
 
   const blob = new Blob([srcDoc], { type: 'text/html' }) 
-  // const file = new File(blob, 'test.txt', { type: "plain/text" });
-
-  // console.log(file);
 
   const href = URL.createObjectURL(blob);
-
-  console.log(href);
 
   return (
       <>
@@ -46,9 +41,8 @@ function App() {
           </Iframe>
         </PaneBottom>
         <DownloadButton href={href} download>Download</DownloadButton>
-
       </>
-    )
+    );
 }
 
 const PaneTop = styled.div`
