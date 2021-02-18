@@ -21,13 +21,16 @@ function App() {
     }, 1000)
 
     return () => clearTimeout(timeout)
-  }, [ codeHtml, codeCss, codeJs ]);
+  }, [codeHtml, codeCss, codeJs]);
 
+  const blob = new Blob([srcDoc], { type: 'text/html' }) 
+  // const file = new File(blob, 'test.txt', { type: "plain/text" });
 
-  const handleDownloadCode = () =>{
+  // console.log(file);
 
-  }
+  const href = URL.createObjectURL(blob);
 
+  console.log(href);
 
   return (
       <>
@@ -42,7 +45,7 @@ function App() {
 
           </Iframe>
         </PaneBottom>
-        <DownloadButton onClick={handleDownloadCode}>Download</DownloadButton>
+        <DownloadButton href={href} download>Download</DownloadButton>
 
       </>
     )
