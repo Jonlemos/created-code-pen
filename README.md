@@ -37,4 +37,4 @@ Com isso abrirá a página na url http://localhost:3000/ , caso nenhuma aplicaç
 Página será:
 http://localhost:3000/
 Nessa pagina pode se visualizar local para escrever códigos HTML, CSS, JS na parte de cima da página.
-Na parte de baixo você pode visualizar o código utilizado acima.
+Na parte de baixo você pode visualizar o código utilizado acima. Utiliza-se o botão de download para baixar o código escrito no conteúdo superior.
